@@ -7,7 +7,9 @@
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/tmknom/terraform-docs.svg)](https://microbadger.com/images/tmknom/terraform-docs)
 [![License](https://img.shields.io/github/license/tmknom/terraform-docs.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Dockerfile template.
+Generate docs from terraform modules based on Docker.
+
+This is [terraform-docs](https://github.com/segmentio/terraform-docs) wrapper.
 
 ## Requirements
 
@@ -15,9 +17,24 @@ Dockerfile template.
 
 ## Usage
 
+### Basic
+
 ```sh
-curl -fsSL https://raw.githubusercontent.com/tmknom/terraform-docs/master/install | sh -s example
-cd example
+docker run --rm -v "$PWD:/work" tmknom/terraform-docs
+```
+
+### Specific directory
+
+```sh
+docker run --rm -v "$PWD:/work" tmknom/terraform-docs markdown /path/to/dir
+```
+
+### Help
+
+For details, refer to [segmentio/terraform-docs](https://github.com/segmentio/terraform-docs).
+
+```sh
+docker run --rm tmknom/terraform-docs --help
 ```
 
 ## Makefile targets
