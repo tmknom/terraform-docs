@@ -8,7 +8,8 @@ ARG PACKAGE_VERSION="0.4.0"
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
 # https://stackoverflow.com/questions/24855081/how-do-i-import-a-specific-version-of-a-package-using-go-get
 # hadolint ignore=DL3003
-RUN	apk add --no-cache git=2.18.0-r0 && \
+RUN set -x && \
+    apk add --no-cache git=2.18.0-r0 && \
     go get -d -v ${PACKAGE_PATH} && \
     cd /go/src/${PACKAGE_PATH} && \
     git checkout -b ${PACKAGE_VERSION} refs/tags/v${PACKAGE_VERSION} && \
