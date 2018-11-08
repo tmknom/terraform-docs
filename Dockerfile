@@ -3,7 +3,7 @@ ARG PACKAGE_PATH="github.com/segmentio/terraform-docs"
 FROM golang:alpine AS builder
 
 ARG PACKAGE_PATH
-ARG PACKAGE_VERSION="0.4.0"
+ARG PACKAGE_VERSION="0.5.0"
 
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
 # https://stackoverflow.com/questions/24855081/how-do-i-import-a-specific-version-of-a-package-using-go-get
