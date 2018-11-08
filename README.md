@@ -45,6 +45,7 @@ format                         Format code
 help                           Show help
 install                        Install requirements
 lint                           Lint code
+release                        Release new tag
 ```
 
 ## Development
