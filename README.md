@@ -45,6 +45,7 @@ format                         Format code
 help                           Show help
 install                        Install requirements
 lint                           Lint code
+release                        Release new tag
 ```
 
 ## Development
@@ -59,7 +60,13 @@ make install
 
 ### Deployment
 
-Automatically deployed by "[DockerHub Automated Build](https://docs.docker.com/docker-hub/builds/)" after merge.
+Create new tag.
+
+```sh
+make release
+```
+
+So, automatically deployed by "[DockerHub Automated Build](https://docs.docker.com/docker-hub/builds/)" after merge.
 
 ### Deployment Pipeline
 
