@@ -1,6 +1,11 @@
 # terraform-docs
 
-[![CircleCI](https://circleci.com/gh/tmknom/terraform-docs.svg?style=svg)](https://circleci.com/gh/tmknom/terraform-docs)
+[![Dockerfile Actions Status](https://github.com/tmknom/terraform-docs/workflows/Dockerfile/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3ADockerfile)
+[![Shell Script Actions Status](https://github.com/tmknom/terraform-docs/workflows/Shell%20Script/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3A%22Shell+Script%22)
+[![Markdown Actions Status](https://github.com/tmknom/terraform-docs/workflows/Markdown/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3AMarkdown)
+[![YAML Actions Status](https://github.com/tmknom/terraform-docs/workflows/YAML/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3AYAML)
+[![JSON Actions Status](https://github.com/tmknom/terraform-docs/workflows/JSON/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3AJSON)
+
 [![Docker Build Status](https://img.shields.io/docker/build/tmknom/terraform-docs.svg)](https://hub.docker.com/r/tmknom/terraform-docs/builds/)
 [![Docker Automated build](https://img.shields.io/docker/automated/tmknom/terraform-docs.svg)](https://hub.docker.com/r/tmknom/terraform-docs/)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/tmknom/terraform-docs.svg)](https://microbadger.com/images/tmknom/terraform-docs)
@@ -45,7 +50,7 @@ format                         Format code
 help                           Show help
 install                        Install requirements
 lint                           Lint code
-release                        Release new tag
+release                        Release
 ```
 
 ## Development
@@ -60,20 +65,16 @@ make install
 
 ### Deployment
 
-Create new tag.
-
-```sh
-make release
-```
-
-So, automatically deployed by "[DockerHub Automated Build](https://docs.docker.com/docker-hub/builds/)" after merge.
+1. Bump [VERSION](https://raw.githubusercontent.com/tmknom/terraform-docs/master/VERSION) file.
+2. Run `make release`.
+3. Automatically deployed by "[Docker Hub Automated Build](https://docs.docker.com/docker-hub/builds/)".
 
 ### Deployment Pipeline
 
 1. GitHub - Version Control System
    - <https://github.com/tmknom/terraform-docs>
-2. CircleCI - Continuous Integration
-   - <https://circleci.com/gh/tmknom/terraform-docs>
+2. GitHub Actions - Continuous Integration
+   - <https://github.com/tmknom/terraform-docs/actions>
 3. Docker Hub - Docker Registry
    - <https://hub.docker.com/r/tmknom/terraform-docs>
 4. MicroBadger - Docker Inspection
