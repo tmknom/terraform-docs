@@ -72,8 +72,8 @@ So, automatically deployed by "[DockerHub Automated Build](https://docs.docker.c
 
 1. GitHub - Version Control System
    - <https://github.com/tmknom/terraform-docs>
-2. CircleCI - Continuous Integration
-   - <https://circleci.com/gh/tmknom/terraform-docs>
+2. GitHub Actions - Continuous Integration
+   - <https://github.com/tmknom/terraform-docs/actions>
 3. Docker Hub - Docker Registry
    - <https://hub.docker.com/r/tmknom/terraform-docs>
 4. MicroBadger - Docker Inspection
