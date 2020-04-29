@@ -3,7 +3,7 @@ ARG PACKAGE_PATH="github.com/segmentio/terraform-docs"
 FROM golang:alpine AS builder
 
 ARG PACKAGE_PATH
-ARG PACKAGE_VERSION="0.5.0"
+ARG TERRAFORM_DOCS_VERSION
 
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
 # https://stackoverflow.com/questions/24855081/how-do-i-import-a-specific-version-of-a-package-using-go-get
@@ -12,8 +12,8 @@ RUN set -x && \
     apk add --no-cache git=2.24.3-r0&& \
     go get -d -v ${PACKAGE_PATH} && \
     cd /go/src/${PACKAGE_PATH} && \
-    git checkout -b ${PACKAGE_VERSION} refs/tags/v${PACKAGE_VERSION} && \
-    CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags="-s -w -X main.version=${PACKAGE_VERSION}" ${PACKAGE_PATH}
+    git checkout -b ${TERRAFORM_DOCS_VERSION} refs/tags/v${TERRAFORM_DOCS_VERSION} && \
+    CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags="-s -w -X main.version=${TERRAFORM_DOCS_VERSION}" ${PACKAGE_PATH}
 
 
 FROM scratch
