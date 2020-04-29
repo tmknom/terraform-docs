@@ -57,8 +57,8 @@ format-json:
 format-yaml:
 	docker run --rm -v "$(CURDIR):/work" tmknom/prettier --parser=yaml --write '**/*.y*ml'
 
-release: ## Release new tag
-	version=$$(grep "ARG PACKAGE_VERSION=" Dockerfile | cut -d'"' -f2) && git tag "$${version}" && git push origin "$${version}"
+release: ## Release
+	version=$$(cat VERSION) && git tag "$${version}" && git push origin "$${version}"
 
 
 # https://postd.cc/auto-documented-makefile/
