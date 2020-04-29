@@ -1,6 +1,11 @@
 # terraform-docs
 
-[![CircleCI](https://circleci.com/gh/tmknom/terraform-docs.svg?style=svg)](https://circleci.com/gh/tmknom/terraform-docs)
+[![Dockerfile Actions Status](https://github.com/tmknom/terraform-docs/workflows/Dockerfile/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3ADockerfile)
+[![Shell Script Actions Status](https://github.com/tmknom/terraform-docs/workflows/Shell%20Script/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3A%22Shell+Script%22)
+[![Markdown Actions Status](https://github.com/tmknom/terraform-docs/workflows/Markdown/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3AMarkdown)
+[![YAML Actions Status](https://github.com/tmknom/terraform-docs/workflows/YAML/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3AYAML)
+[![JSON Actions Status](https://github.com/tmknom/terraform-docs/workflows/JSON/badge.svg)](https://github.com/tmknom/terraform-docs/actions?query=workflow%3AJSON)
+
 [![Docker Build Status](https://img.shields.io/docker/build/tmknom/terraform-docs.svg)](https://hub.docker.com/r/tmknom/terraform-docs/builds/)
 [![Docker Automated build](https://img.shields.io/docker/automated/tmknom/terraform-docs.svg)](https://hub.docker.com/r/tmknom/terraform-docs/)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/tmknom/terraform-docs.svg)](https://microbadger.com/images/tmknom/terraform-docs)
